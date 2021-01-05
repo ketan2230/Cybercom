@@ -1,0 +1,8 @@
+today i learn about git and github. 
+i learn many things in that. like Make new Repository and new branches in git.
+i follow the documantation.
+i face many problems furing practical. but with help of google i solve it.
+i also learn new things like how to delete branches, modified files..
+and i also find easy steps for upload file on github leaving documantation.
+
+and yes todays day was awesome. i learn many things and i wish my whole training goes like this.
