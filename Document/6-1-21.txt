@@ -1,0 +1,19 @@
+Today first i did practise of yesterday's work
+
+then i move to learn new concept
+
+PULL in github by git bash
+
+- i reffer documentation gitbash
+
+https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#download-the-latest-changes-in-the-project  
+
+- and youtube video
+
+https://youtu.be/z8CYDyFqzp0
+
+and then practise on it and after that attend the chirag sir lecture
+
+and search about session concept like revert, branch, merge, log and head..
+
+collect knowledge about them and did practice on it
