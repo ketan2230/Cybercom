@@ -1,0 +1,13 @@
+today i learn about 
+
+Head, revert  Command in detail
+
+also about log command and use of log command 
+
+and search and read about squash command
+
+and also did practice about reset command
+
+also face many error and solve it and understood the reason behind it.
+
+so thats it for todays
