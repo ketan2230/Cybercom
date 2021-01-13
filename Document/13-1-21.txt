@@ -1,0 +1,13 @@
+Hey Todays Day very easy..
+first time i complete my work before 7 pm
+
+today first i watch videos like
+
+DOM
+DOM manipuaton
+Session Intro
+Dom Access
+Event & Event Handler
+
+and i also completed my tasks
+and do practice on session storage and localstorage
