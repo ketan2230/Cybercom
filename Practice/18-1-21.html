@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Practice</title>
+    </head>
+
+    <body>
+        <h1>Hello</h1>
+        <script>
+            var ketan = {
+                name:'ketan',
+                age:20,
+                address:'India Colony',
+                hello:function(name)
+                {
+                    console.log('Hello '+name+ ' Function welcome to console');
+                    console.log(this.name);
+                },
+                calAge:function(year)
+                {
+                    console.log(2021-year);
+                }
+               
+            };
+            var nm='john';
+            console.log(ketan.address );
+            console.log(ketan.hello(nm));
+            ketan.calAge(1999);
+        </script>
+    </body>
+</html>
