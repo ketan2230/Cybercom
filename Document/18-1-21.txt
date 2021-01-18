@@ -1,0 +1,19 @@
+hello
+
+first i left 3 videos of yesterday so i first complete that
+
+and then move on todays video,
+
+today i learn about
+
+-this key usage
+-accessibility
+-class
+-function
+-etc
+
+then i move to todays task
+
+and learn in that task about, textfield, textarea, file, select and option, etc..
+
+then i practise for functions and variable in javascript
