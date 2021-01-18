@@ -1,0 +1,16 @@
+Hello
+
+Today first i complete yesterdays videos bcs i left with 2 or 3 videos
+
+then i complete todays video and in that video i learn about 
+
+-this key usage
+-class defination
+-function defination
+-and variable accisiblity
+etc.
+
+then i move to todays task to html
+
+and in that task i work on input text, file, textarea, select and option, etc
+ so thats it for todays.
