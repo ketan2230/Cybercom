@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            Task Form
+        </title>
+
+        <style>
+            form{
+                width: 50%;
+                font-size: large;
+            }
+            label
+            {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="submit.html">
+         
+                <fieldset>
+                    <legend>Your Address</legend>
+                        <label>First Name </label>
+                        <input type="text"><br>
+                        <label>Last Name </label>
+                        <input type="text"><br>
+                        <label>Street </label>
+                        <input type="text"><br>
+                        <label>City </label>
+                        <input type="text">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Adional Details</legend>
+                        <label>BioGraphy</label>
+                        <textarea cols="30" rows="3"></textarea><br>
+
+                        <label>Image</label>
+                        <input type="file" type="image/gif"><br>
+
+                        <label>Age Group</label>
+                        <select name="age" id="age">
+                            <option>0 to 9</option>
+                            <option>10 to 19</option>
+                            <option>20 to 29</option>
+                        </select>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interests</legend>
+                       
+                        <label>Hobbies</label>
+                        <select name="hobby" id=obby"h">
+                            <option>Playing Soccer</option>
+                            <option>Dancing</option>
+                            <option>Gardening</option>
+                            <option>Watching Movies</option>
+                        </select><br>
+
+                        <label>Favourite Car</label>
+                        <select name="hobby" id="hobby">
+                            <option>BMW</option>
+                            <option>VOLVO</option>
+                            <option>AUDI</option>
+                            <option>SWIFT</option>
+                        </select><br>
+
+                        <label>Favourite Transport</label>
+                        <select name="trans" id="trans">
+                                <option>Train</option>
+                                <option>Bus</option>
+                                    <option>Ship</option>
+                                    <option>Boat</option>
+                        </select>
+
+                </fieldset>
+
+                <input type="submit">
+                <input type="reset">
+            
+        </form>
+    </body>
+</html>
