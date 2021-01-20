@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script>
+
+        var marks = {
+            ketan: 90,
+            bhargavi: 78,
+            ruchita: 67,
+            hardik: 85,
+        };
+
+       console.log('Before Sorting : '+ marks);
+
+        console.log(marks);
+        var sortable = [];
+        for (var i in marks) {
+            sortable.push([i, marks[i]]);
+        }
+
+        sortable.sort(function (a, b) {
+            return a[1] - b[1];
+        });
+
+        console.log('After Sorting : '+ sortable);
+
+    </script>
+</head>
+
+<body>
+    <h1>Task 3</h1>
+</body>
+
+</html>

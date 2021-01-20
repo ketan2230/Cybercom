@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Html Form Example</title>
+
+        <style>
+            .input
+{
+    margin-left: 10px;    
+    justify-content: flex-start;
+    display: flex;
+    width: 55%;
+}
+label
+{
+    width: 120px;
+    justify-content: flex-end;
+    display: flex;
+}
+.align
+{
+    display: flex;
+    padding-top: 11px;
+}
+.box
+{
+    margin-left : auto;
+    margin-right: auto;
+    height: 40%;
+    width: 35%;
+    border: solid;
+    border-color: black;
+    background-color: #f8f6f7;      
+    color: black ;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn
+{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+        </style>
+
+<script>
+    
+</script>
+       
+<script src="script.js">
+</script>
+    </head>
+   
+	
+    <body>
+	<form action = "view.html">
+        <div class="box">
+            <div class="align">
+        <label>Name :</label>
+        <input type="text" class = "input" id="name" name="name" placeholder="Enter Name"></input>
+        </div>
+        
+        <div class="align">
+        <label>Email :</label>
+        <input type="email" class="input" id="email" name="email" placeholder="Enter Email"/>
+    </div>
+
+    <div class="align">
+        
+        <label> Date of Birth : </label>
+        <input type="date" class="input" id="dateOfBirth" name="dateOfBirth" placeholder="Enter BOD"/>
+
+    </div>
+
+        <input type="button" class="btn" name="submit" value = "Add" onclick="addElement();"/>
+
+        <input type="submit" class="btn" name="display" value = "view all records"/>
+        <div id="Result"></div> 
+
+    </div>
+	</form>
+</body>
+
+
+</html>
