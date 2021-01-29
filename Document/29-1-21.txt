@@ -1,0 +1,9 @@
+Hello
+
+Today first i practise of IN , NOT IN , LIKE, NOT LIKE in mySQL
+
+and then see todays video of angular,
+
+ya but today i did practise of videos 
+
+so i do on Monday.
