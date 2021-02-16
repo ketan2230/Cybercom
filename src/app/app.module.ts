@@ -1,3 +1,4 @@
+import { PostService } from './post.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 
@@ -47,7 +48,9 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     HttpClientModule
   ],
   providers: [
-    DemoService
+    DemoService,
+    PostService,
+    {}
   ],
   bootstrap: [AppComponent]
 })
