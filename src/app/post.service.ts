@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable, throwError} from 'rxjs/Observable';
-import {catchError, retry} from 'rxjs/operators';
+import {Observable, throwError} from 'rxjs';
+import {catchError} from 'rxjs/operators';
 import { appError } from './common/AppError';
 
 @Injectable({
@@ -33,9 +33,7 @@ export class PostService {
     .pipe(catchError((error : Response) => {
 
       return throwError(new appError(error.json()));
-
     })
-    
     );
  }
 }
