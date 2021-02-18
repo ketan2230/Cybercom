@@ -1,0 +1,12 @@
+Angular Modules
+    - Forms
+    - ReactiveForms
+    - Http
+    - Router
+
+
+* Router
+    Steps
+        - Configure the routes
+        - Add a router outlet
+        - Add Links

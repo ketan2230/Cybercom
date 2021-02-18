@@ -1,7 +1,8 @@
-import { PostService } from './../post.service';
+import { BadInput } from './../common/bad-input';
+import { appError } from './../common/AppError';
+import { NotFoundError } from './../common/not-found-error';
+import { PostService } from '../../../services/post.service';
 import { Component, OnInit } from '@angular/core';
-
-
 @Component({
   selector: 'app-http-example',
   templateUrl: './http-example.component.html',
@@ -12,13 +13,10 @@ export class HttpExampleComponent implements OnInit {
   posts: any;
 
   ngOnInit() {
-    this.service.getPosts()
-      .subscribe(response => {
-        this.posts = response;
-      }, error => {
-        alert('An unexpected error Occur');
-        console.log(error);
-      });
+    this.service.getAll()
+      .subscribe(
+        posts =>
+          this.posts = posts);
   }
 
   constructor(private service: PostService) {
@@ -28,39 +26,36 @@ export class HttpExampleComponent implements OnInit {
     let post = { title: input.value };
     input.value = '';
 
-    this.service.createPost(post)
+    this.service.create(post)
       .subscribe(response => {
         post['id'] = response;
         this.posts.splice(0, 0, post);
-      }, (error: Response) => {
-        if (error.status === 400){}
-          //this.form.setErrors(error);
-        else {
-          alert('An unexpected error Occur');
-          console.log(error);
-        }
+      }, (error: appError) => {
+        if (error instanceof BadInput) { }
+        //this.form.setErrors(error.originalError);
+        else throw error;
       });
   }
 
   updatePost(post) {
-    this.service.updatePost(post)
+    this.service.update(post)
       // this.http.put(this.url, JSON.stringify(post))
       .subscribe(response => {
         console.log(response);
-      })
+      });
   }
 
   deletePost(post) {
-    this.service.deletePost(post.id)
-      .subscribe(response => {
+    this.service.delete(post.id)
+      .subscribe(
+        response => {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
       }, (error: Response) => {
-        if (error.status === 404)
+        if (error instanceof NotFoundError)
           alert('Already Deleted');
         else {
-          alert('An unexpected error Occur');
-          console.log(error);
+          throw error;
         }
       });
   }

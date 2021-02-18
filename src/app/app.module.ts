@@ -1,4 +1,6 @@
-import { PostService } from './post.service';
+import { AppErrorHandler } from './common/app-error-handler';
+import { ErrorHandler } from '@angular/core';
+import { PostService } from '../../services/post.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 
@@ -20,6 +22,8 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { HttpComponent } from './http/http.component';
 import { HttpExampleComponent } from './http-example/http-example.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { RouterComponent } from './router/router.component';
+import { SweetAlertDemoComponent } from './sweet-alert-demo/sweet-alert-demo.component';
 
 //import { AsynchronousOperationComponent } from './asynchronous-operation/asynchronous-operation.component';
 
@@ -38,6 +42,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     HttpComponent,
     HttpExampleComponent,
     ReactiveFormComponent,
+    RouterComponent,
+    SweetAlertDemoComponent,
 
   ],
   imports: [
@@ -50,7 +56,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
   providers: [
     DemoService,
     PostService,
-    {}
+    { provide : ErrorHandler , useClass : AppErrorHandler }
   ],
   bootstrap: [AppComponent]
 })
