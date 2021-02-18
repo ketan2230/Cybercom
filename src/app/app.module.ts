@@ -8,11 +8,12 @@ import { DemoService } from './demo/demo.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './cources.component';
 import { DemoComponent } from './demo/demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { LeapYearComponent } from './leap-year/leap-year.component';
 import { StringLengthComponent } from './string-length/string-length.component';
@@ -24,6 +25,16 @@ import { HttpExampleComponent } from './http-example/http-example.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { RouterComponent } from './router/router.component';
 import { SweetAlertDemoComponent } from './sweet-alert-demo/sweet-alert-demo.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CompanyModuleComponent } from './company-module/company-module.component';
+import { CMSModuleComponent } from './cmsmodule/cmsmodule.component';
+import { EmployeeModuleComponent } from './employee-module/employee-module.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { AddCmsComponent } from './add-cms/add-cms.component';
+import { CmsListComponentComponent } from './cms-list-component/cms-list-component.component';
+import { CompanyConfigurationComponent } from './company-configuration/company-configuration.component';
 
 //import { AsynchronousOperationComponent } from './asynchronous-operation/asynchronous-operation.component';
 
@@ -44,14 +55,25 @@ import { SweetAlertDemoComponent } from './sweet-alert-demo/sweet-alert-demo.com
     ReactiveFormComponent,
     RouterComponent,
     SweetAlertDemoComponent,
-
+    NavbarComponent,
+    CompanyModuleComponent,
+    CMSModuleComponent,
+    EmployeeModuleComponent,
+    NotFoundComponent,
+    EmployeeListComponent,
+    AddEmployeeComponent,
+    AddCmsComponent,
+    CmsListComponentComponent,
+    CompanyConfigurationComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [
     DemoService,
