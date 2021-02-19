@@ -17,26 +17,26 @@ const routes: Routes = [
         component: EmployeeModuleComponent,
     },
     { 
-        path: 'employee', 
+        path: 'Employee', 
         component: EmployeeModuleComponent,
         children: [
-            { path: 'add-employee', component: AddEmployeeComponent },
-            { path: 'employee-list', component: EmployeeListComponent }
+            { path: 'Add-employee', component: AddEmployeeComponent },
+            { path: 'Employee-list', component: EmployeeListComponent }
         ]
     },
     { 
-        path: 'cms', 
+        path: 'Cms', 
         component: CMSModuleComponent,
         children: [
-            { path: 'add-cms', component: AddCmsComponent },
-            { path: 'cms-list', component: CmsListComponentComponent }
+            { path: 'Add-cms', component: AddCmsComponent },
+            { path: 'Cms-list', component: CmsListComponentComponent }
         ] 
     },
     { 
-        path: 'company', 
+        path: 'Company', 
         component: CompanyModuleComponent,
         children: [
-            { path: 'company-configuration', component: CompanyConfigurationComponent },
+            { path: 'Company-configuration', component: CompanyConfigurationComponent },
         ] 
     },
     {
