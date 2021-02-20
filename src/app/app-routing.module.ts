@@ -9,10 +9,12 @@ import { AuthGuard } from './_service/auth-guard.service';
 import { LoginComponent } from './login/login.component';  
 
 const routes: Routes = [
-    { 
-        path: '', 
-        redirectTo: '/employee', 
-        pathMatch: 'full' 
+    {  
+        path: '',  
+        component: LoginComponent,  
+        data: {  
+          title: 'Login'  
+        }
     },
     { 
         path: 'employee', 
@@ -45,16 +47,9 @@ const routes: Routes = [
         path: 'login',  
         component: LoginComponent,  
         data: {  
-          title: 'Login'  
+          title: 'Login'
         }  
-      },  
-      {  
-        path: '',  
-        component: LoginComponent,  
-        data: {  
-          title: 'Login'  
-        }  
-      }
+      },   
 ];
 
 @NgModule({
