@@ -1,49 +1,35 @@
-import { CompanyConfigurationComponent } from './company-configuration/company-configuration.component';
-import { CmsListComponentComponent } from './cms-list-component/cms-list-component.component';
-import { AddCmsComponent } from './add-cms/add-cms.component';
-import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { CompanyModuleComponent } from './company-module/company-module.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EmployeeModuleComponent } from './employee-module/employee-module.component';
 import { CMSModuleComponent } from './cmsmodule/cmsmodule.component';
 
 const routes: Routes = [
-    {
-        path: '',
-        component: EmployeeModuleComponent,
+    { 
+        path: '', 
+        redirectTo: '/employee', 
+        pathMatch: 'full' 
     },
     { 
-        path: 'Employee', 
+        path: 'employee', 
         component: EmployeeModuleComponent,
-        children: [
-            { path: 'Add-employee', component: AddEmployeeComponent },
-            { path: 'Employee-list', component: EmployeeListComponent }
-        ]
+        loadChildren: () => import('./employee-module/employee.module').then(m => m.EmployeeModule),
     },
     { 
-        path: 'Cms', 
+        path: 'cms', 
         component: CMSModuleComponent,
-        children: [
-            { path: 'Add-cms', component: AddCmsComponent },
-            { path: 'Cms-list', component: CmsListComponentComponent }
-        ] 
+        loadChildren: () => import('./cmsmodule/cms.module').then(m => m.CmsModule),
     },
     { 
-        path: 'Company', 
+        path: 'company', 
         component: CompanyModuleComponent,
-        children: [
-            { path: 'Company-configuration', component: CompanyConfigurationComponent },
-        ] 
+        loadChildren: () => import('./company-module/company.module').then(m => m.CompanyModule),
     },
-    {
-        path: '**',
-        component: NotFoundComponent
+    { 
+        path: '**', 
+        component: NotFoundComponent 
     }
-    
 ];
 
 @NgModule({
@@ -51,12 +37,3 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [EmployeeModuleComponent,
-                                  CMSModuleComponent,
-                                  CompanyModuleComponent,
-                                  AddEmployeeComponent,
-                                  EmployeeListComponent,
-                                  AddCmsComponent,
-                                  CmsListComponentComponent,
-                                  CompanyConfigurationComponent,
-                                  NotFoundComponent]
