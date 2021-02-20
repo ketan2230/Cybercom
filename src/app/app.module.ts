@@ -25,6 +25,8 @@ import { HttpExampleComponent } from './http-example/http-example.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { RouterComponent } from './router/router.component';
 import { SweetAlertDemoComponent } from './sweet-alert-demo/sweet-alert-demo.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 //import { AsynchronousOperationComponent } from './asynchronous-operation/asynchronous-operation.component';
@@ -46,6 +48,8 @@ import { SweetAlertDemoComponent } from './sweet-alert-demo/sweet-alert-demo.com
     ReactiveFormComponent,
     RouterComponent,
     SweetAlertDemoComponent,
+    HomeComponent,
+    LoginComponent,
     
   ],
   imports: [

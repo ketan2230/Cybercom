@@ -4,6 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EmployeeModuleComponent } from './employee-module/employee-module.component';
 import { CMSModuleComponent } from './cmsmodule/cmsmodule.component';
+import { HomeComponent } from './home/home.component';  
+import { AuthGuard } from './_service/auth-guard.service';  
+import { LoginComponent } from './login/login.component';  
 
 const routes: Routes = [
     { 
@@ -29,7 +32,29 @@ const routes: Routes = [
     { 
         path: '**', 
         component: NotFoundComponent 
-    }
+    },
+    {  
+        path: 'home',  
+        component: HomeComponent,  
+        canActivate: [AuthGuard],  
+        data: {  
+          title: 'Home'   
+        }  
+      },  
+      {  
+        path: 'login',  
+        component: LoginComponent,  
+        data: {  
+          title: 'Login'  
+        }  
+      },  
+      {  
+        path: '',  
+        component: LoginComponent,  
+        data: {  
+          title: 'Login'  
+        }  
+      }
 ];
 
 @NgModule({
