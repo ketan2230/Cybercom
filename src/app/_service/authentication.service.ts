@@ -7,8 +7,8 @@ export class AuthenticationService {
     if (username == "admin" && password == "admin") {  
       localStorage.setItem('currentUser', "loggedin");  
       return true;  
-    }  
-  }  
+    } 
+  }
   logout() {  
     localStorage.removeItem('currentUser');  
   }  
