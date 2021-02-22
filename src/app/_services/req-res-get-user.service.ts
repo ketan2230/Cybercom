@@ -8,8 +8,6 @@ import { DataServiceService } from './data-service.service';
 export class ReqResGetUserService extends DataServiceService {
 
   constructor(http : HttpClient) {
-
       super('https://reqres.in/api/users?page=1',http);
-
    }
 }

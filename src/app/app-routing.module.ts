@@ -17,50 +17,35 @@ import { AuthGuard } from './_services/auth-guard.service';
 
 
 const routes: Routes = [
-                   
-                    
-                    {path: 'company' , 
-                    component:CompanyComponent,
-                    canActivate: [AuthGuard],
-                    loadChildren: ()=> import ('./modules/company-module/company-module.module').then(m=>m.CompanyModuleModule)
-                    
-                    //children:[ {path: 'companyConfiguration' ,component:CompanyConfigurationComponent },]
-
-                    },
-
-                  {
-                    path: 'employee' , component:EmployeeComponent,
-                    canActivate: [AuthGuard],
-                    loadChildren:()=> import ('./modules/employee-module/employee-module.module').then(m=>m.EmployeeModuleModule)
-                    
-                    // children:[
-
-                    //   {path: 'addEmployee' , component:AddEmployeeComponent },
-                    //   {path: 'employeeList' , component:EmployeeListComponent },
 
 
-                    // ]
-                   },
+  {
+    path: 'company',
+    component: CompanyComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/company-module/company-module.module').then(m => m.CompanyModuleModule)
 
-                  {path: 'cms' , 
-                  component:CmsComponent,
-                  canActivate: [AuthGuard],
-                  loadChildren:()=> import ('./modules/cmsmodule/cmsmodule.module').then(m=>m.CMSModuleModule)
-                  
-                  // children:[
+  },
 
-                  //   {path: 'addCms' , component:AddCmsComponent },
-                  //   {path: 'cmsList' , component:CmsListComponent }
+  {
+    path: 'employee', component: EmployeeComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/employee-module/employee-module.module').then(m => m.EmployeeModuleModule)
 
-                  // ] 
+  },
 
-                  
-                },
+  {
+    path: 'cms',
+    component: CmsComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/cmsmodule/cmsmodule.module').then(m => m.CMSModuleModule)
 
-                {path:'login', component:ReqResLoginComponent},
-                {path:'home',component:HomeComponent  ,  canActivate: [AuthGuard]},
-                {path: 'listUSer', component: ResReqComponent,canActivate: [AuthGuard]},
-                {path: '',  redirectTo: '/login', pathMatch: 'full'}
+  },
+
+  { path: 'login', component: ReqResLoginComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'listUSer', component: ResReqComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 
 ];
 
