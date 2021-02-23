@@ -1,28 +1,24 @@
 <div class="c-from">
-    <div class="contact-from">
-      <form action="" method="post" [formGroup]='frm' (ngSubmit)='login()'>
+  <div class="contact-from">
+    <form action="" method="post" [formGroup]='frm' (ngSubmit)='login()'>
       <h3>login</h3>
       <br>
-      
-     <div class="l-box" >
-       <input type="text" formControlName='username' class="form-control" >
-       <label for="">Username</label>
-       <div class="alert-danger" *ngIf="username?.touched && !username?.valid">
-        <div *ngIf='username?.errors?.required'>name required </div>
-      
-      </div>
+      <div class="l-box">
+        <input type="text" formControlName='username' class="form-control">
+        <label for="">Username</label>
+        <div class="alert-danger" *ngIf="username?.touched && !username?.valid">
+          <div *ngIf='username?.errors?.required'>name required </div>
+        </div>
         <br>
-     </div>
-     <div class="l-box" >
-       <input type="password"  formControlName='password' class="form-control" >
-       <label for="">password</label>
-       <div class="alert-danger" *ngIf="password?.touched && !password?.valid">
-        <div *ngIf='password?.errors?.required'>password required </div>
-      
       </div>
-       
-     </div>
-     <br>
-    <input class="submit" type="submit"[disabled]='!this.frm.valid' value="LOG IN">
+      <div class="l-box">
+        <input type="password" formControlName='password' class="form-control">
+        <label for="">password</label>
+        <div class="alert-danger" *ngIf="password?.touched && !password?.valid">
+          <div *ngIf='password?.errors?.required'>password required </div>
+        </div>
+      </div>
+      <br>
+      <input class="submit" type="submit" [disabled]='!this.frm.valid' value="LOG IN">
     </form>
   </div>

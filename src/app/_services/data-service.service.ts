@@ -12,38 +12,32 @@ import { allError } from '../common/allError';
 })
 export class DataServiceService {
 
-  constructor(@Inject(String) private url : string , private http : HttpClient ) { }
+  constructor(@Inject(String) private url: string, private http: HttpClient) { }
 
 
-    getData()
-    {
-      console.log('getdata in data service works');
-     return  this.http.get(this.url)
-      .pipe(map(Response=>Response),catchError(this.errorHandle))
-    }
-    
-    addData(data: any) {
-      return this.http.post(this.url, data)
-        .pipe(map(Response=>Response),
-          catchError((this.errorHandle)));
-  
-  
-    }
-
-private errorHandle(error : Response)
-{
-  if(error.status == 404)
-  {
-    return throwError(new notFound());
+  getData() {
+    console.log('getdata in data service works');
+    return this.http.get(this.url)
+      .pipe(map(Response => Response), catchError(this.errorHandle))
   }
 
-  if(error.status == 400)
-  {
-    return throwError(new badRequest());
+  addData(data: any) {
+    return this.http.post("https://reqres.in/api/login", data)
+      .pipe(map(Response => Response),
+        catchError((this.errorHandle)));
   }
 
-  return throwError(new allError(error));
+  private errorHandle(error: Response) {
+    if (error.status == 404) {
+      return throwError(new notFound());
+    }
 
-}
+    if (error.status == 400) {
+      return throwError(new badRequest());
+    }
+
+    return throwError(new allError(error));
+
+  }
 
 }

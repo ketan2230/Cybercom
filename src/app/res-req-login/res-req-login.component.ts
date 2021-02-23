@@ -41,6 +41,7 @@ export class ReqResLoginComponent implements OnInit {
   get password() {
     return this.frm.get('password');
   }
+
   login() {
 
     let data = { "email": this.username?.value, "password": this.password?.value };
@@ -54,8 +55,6 @@ export class ReqResLoginComponent implements OnInit {
           this.router.navigate(['/home']);
 
         }
-
-
       },
         (error: Response) => {
           if (error instanceof badRequest) {
@@ -64,8 +63,6 @@ export class ReqResLoginComponent implements OnInit {
           }
           else throw error;
         })
-
-
   }
 
 }
