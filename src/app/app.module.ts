@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { CMSModuleModule } from './modules/cmsmodule/cmsmodule.module';
 import { CompanyModuleModule } from './modules/company-module/company-module.module';
 import { EmployeeModuleModule } from './modules/employee-module/employee-module.module';
@@ -18,7 +15,6 @@ import { globalErrorHandler } from './common/global-errorHandler';
 import { ReqResLoginComponent } from './res-req-login/res-req-login.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthGuard } from './_services/auth-guard.service';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
